@@ -1,0 +1,25 @@
+[project]
+name = "agenda-backend"
+version = "0.1.0"
+description = "Agenda backend service"
+authors = [{ name = "Agenda" }]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "sqlalchemy[asyncio]",
+    "aiosqlite",
+    "pydantic",
+    "alembic",
+    "strawberry-graphql[fastapi]",
+    "scikit-learn",
+    "numpy",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "httpx"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
